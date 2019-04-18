@@ -65,9 +65,9 @@ case "`uname`" in
 esac
 
 CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
-
+JAVA_HOME=/usr/java/jdk1.8.0_211-amd64
 # Determine the Java command to use to start the JVM.
-if [ -n "${JAVA_HOME}" ] ; then
+if [ -n "$JAVA_HOME" ] ; then
     if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
         # IBM's JDK on AIX uses strange locations for the executables
         JAVACMD="$JAVA_HOME/jre/sh/java"
