@@ -8,6 +8,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running build automation'
+                sh 'echo JAVA_HOME: $JAVA_HOME'
+                sh 'echo PATH: $PATH'
                 sh './gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
